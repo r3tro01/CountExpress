@@ -11,6 +11,11 @@
             "nombre":"Clientes"
         },
         {
+            "id":110501,
+            "tipo":"mayor",
+            "nombre":"Cliente Sarita"
+        },
+        {
             "id":1208,
             "tipo":"mayor",
             "nombre":"Mobiliario y equipo de oficina"
@@ -34,6 +39,21 @@
             "id":1303,
             "tipo":"mayor",
             "nombre":"Papeleria y utiles de escritorio"
+        },
+        {
+            "id":1304,
+            "tipo":"mayor",
+            "nombre":"Propaganda y publicidad por anticipado"
+        },
+        {
+            "id":2101,
+            "tipo":"mayor",
+            "nombre":"Proveedores"
+        },
+        {
+            "id":210101,
+            "tipo":"mayor",
+            "nombre":"Proveedor Amazona"
         },
         {
             "id":2102,
@@ -65,6 +85,11 @@
             "id":4101,
             "tipo":"mayor",
             "nombre":"Ventas nacionales"
+        },
+        {
+            "id":5101,
+            "tipo":"mayor",
+            "nombre":"Compras nacionales"
         },
         {
             "id":5701,
