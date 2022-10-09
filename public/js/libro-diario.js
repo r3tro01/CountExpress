@@ -24,16 +24,18 @@ btnNuevaPartida.addEventListener("click", (e) => {
 
 // este boton remueve una partida
 btnRemoverPartida.addEventListener("click", (e) => {
-    fetch("/del-partida", { method: "GET"}).then(
-        res => {
-            refrescarPantalla();
-            return res.text();
-        }
-    ).then(
-        data => {
-            alert(data);
-        }
-    );
+    if(confirm("Seguro que quieres eliminar la partida actual?")) {
+        fetch("/del-partida", { method: "GET"}).then(
+            res => {
+                refrescarPantalla();
+                return res.text();
+            }
+        ).then(
+            data => {
+                alert(data);
+            }
+        );
+    }
 });
 
 // este boton agrega una nueva cuenta

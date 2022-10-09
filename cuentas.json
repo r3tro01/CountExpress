@@ -26,9 +26,19 @@
             "nombre":"Rentas pagadas por anticipado"
         },
         {
+            "id":1302,
+            "tipo":"mayor",
+            "nombre":"Primas de seguros pagados por anticipado"
+        },
+        {
             "id":1303,
             "tipo":"mayor",
             "nombre":"Papeleria y utiles de escritorio"
+        },
+        {
+            "id":2102,
+            "tipo":"mayor",
+            "nombre":"Sueldos y salarios por pagar"
         },
         {
             "id":2104,
@@ -50,6 +60,7 @@
             "tipo":"mayor",
             "nombre":"Capital social"
         },
+        
         {
             "id":4101,
             "tipo":"mayor",
@@ -58,7 +69,7 @@
         {
             "id":5701,
             "tipo":"mayor",
-            "nombre":"Gastos por sueldos"
+            "nombre":"Gastos por sueldos ordinarios"
         },
         {
             "id":5705,
@@ -69,6 +80,11 @@
             "id":5707,
             "tipo":"mayor",
             "nombre":"Gastos por horas"
+        },
+        {
+            "id":5801,
+            "tipo":"mayor",
+            "nombre":"Gastos por sueldos ordinarios administrativos"
         }
     ]
 }
