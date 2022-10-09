@@ -1,79 +1,74 @@
 {
     "catalogo":[
         {
-            "id":1,
+            "id":1103,
             "tipo":"mayor",
-            "nombre":"Efectivo y equivalentes"
-        },
-        {
-            "id":2,
-            "tipo":"subcuenta",
-            "nombre":"Caja"
-        },
-        {
-            "id":3,
-            "tipo":"subcuenta",
             "nombre":"Bancos"
         },
         {
-            "id":4,
+            "id":1105,
             "tipo":"mayor",
-            "nombre":"Inventarios"
-        },
-        {
-            "id":5,
-            "tipo":"mayor",
-            "nombre":"Propiedad Planta y Equipo"
-        },
-        {
-            "id":6,
-            "tipo":"subcuenta",
-            "nombre":"Equipo de Transporte"
-        },
-        {
-            "id":7,
-            "tipo":"subcuenta",
-            "nombre":"Mobiliario y Equipo"
-        },
-        {
-            "id":8,
-            "tipo":"mayor",
-            "nombre":"Capital"
-        },
-        {
-            "id":9,
-            "tipo":"mayor",
-            "nombre":"Cuentas por pagar"
-        },
-        {
-            "id":10,
-            "tipo":"mayor",
-            "nombre":"Ventas"
-        },
-        {
-            "id":11,
-            "tipo":"mayor",
-            "nombre":"Debito fiscal"
-        },
-        {
-            "id":12,
-            "tipo":"mayor",
-            "nombre":"Costo de Ventas"
-        },
-        {
-            "id":13,
-            "tipo":"mayor",
-            "nombre":"Cuentas por cobrar"
-        },
-        {
-            "id":14,
-            "tipo":"subcuenta",
             "nombre":"Clientes"
         },
         {
-            "id":15,
+            "id":1208,
             "tipo":"mayor",
-            "nombre":"Crédito fiscal"
+            "nombre":"Mobiliario y equipo de oficina"
+        },
+        {
+            "id":1210,
+            "tipo":"mayor",
+            "nombre":"Equipo de computo"
+        },
+        {
+            "id":1301,
+            "tipo":"mayor",
+            "nombre":"Rentas pagadas por anticipado"
+        },
+        {
+            "id":1303,
+            "tipo":"mayor",
+            "nombre":"Papeleria y utiles de escritorio"
+        },
+        {
+            "id":2104,
+            "tipo":"mayor",
+            "nombre":"Creditos bancarios(corto plazo)"
+        },
+        {
+            "id":2105,
+            "tipo":"mayor",
+            "nombre":"Acreedores diversos"
+        },
+        {
+            "id":2107,
+            "tipo":"mayor",
+            "nombre":"Anticipo de clientes"
+        },
+        {
+            "id":3100,
+            "tipo":"mayor",
+            "nombre":"Capital social"
+        },
+        {
+            "id":4101,
+            "tipo":"mayor",
+            "nombre":"Ventas nacionales"
+        },
+        {
+            "id":5701,
+            "tipo":"mayor",
+            "nombre":"Gastos por sueldos"
+        },
+        {
+            "id":5705,
+            "tipo":"mayor",
+            "nombre":"Gastos por servicios"
+        },
+        {
+            "id":5707,
+            "tipo":"mayor",
+            "nombre":"Gastos por horas"
         }
     ]
 }

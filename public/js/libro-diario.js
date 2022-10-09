@@ -75,8 +75,6 @@ btnGuadarPartida.addEventListener("click", (e) => {
 function getDataForm() {
     let fecha = document.querySelector(`#fecha-${countIDPartida}`).value;
     let idCuenta = document.querySelector(`#cuenta-${countIDCuenta}`).value;
-    let folio = document.querySelector(`#folio-${countIDPartida}`).value;
-    let parcial = document.querySelector(`#parcial-${countIDCuenta}`).value;
     let debe = document.querySelector(`#debe-${countIDCuenta}`).value;
     let haber = document.querySelector(`#haber-${countIDCuenta}`).value;
     let concepto = document.querySelector(`#concepto-${countIDPartida}`).value;
@@ -84,9 +82,7 @@ function getDataForm() {
     return {
         "id": countIDPartida - 1,
         "fecha": fecha,
-        "folio": folio,
         "idCuenta": idCuenta,
-        "parcial": parcial,
         "debe": debe,
         "haber": haber,
         "concepto": concepto
@@ -105,9 +101,9 @@ function getCuentas(locationId, selectedId) {
             html += `<select class="form-control catalago-cuentas js-states mt-1" id="cuenta-${locationId}">`;
             data.catalogo.forEach(element => {
                 if (selectedId == element.id) {
-                    html += `<option value="${element.id}" selected>${element.nombre}</option>`;
+                    html += `<option value="${element.id}" selected>${element.id + " - " + element.nombre}</option>`;
                 } else {
-                    html += `<option value="${element.id}">${element.nombre}</option>`;
+                    html += `<option value="${element.id}">${element.id + " - " + element.nombre}</option>`;
                 }
             });
             html += `</select>`;
@@ -131,19 +127,35 @@ function loadPartidas() {
                     <td class="col-1">
                         <input class="form-control" id="fecha-${countIDPartida}" type="date" value="${element.fecha}" />
                     </td>
-                    <td class="text-center" colspan="5">
+                    <td class="text-center" colspan="3" style="font-weight: bold;">
                         Partida n&deg; ${countIDPartida}
                     </td>
                 </tr>
                 `;
                 html += `
                 <tr style="border: 2px gray solid;">
-                    <td colspan="6"><input type="text" placeholder="Ingrese la descripcion" id="concepto-${countIDPartida}" class="form-control" value="${element.concepto}"></td>
+                    <td colspan="4"><input type="text" placeholder="Ingrese la descripcion" id="concepto-${countIDPartida}" class="form-control" value="${element.concepto}"></td>
                 </tr>
                 `;
                 html += nuevaPartida(element.cuentas);
             });
-            html += totalesLibroDiario();
+
+            if(totalDebe == totalHaber) {
+                html += `
+                <td></td>
+                <th>Totales</th>
+                <td><input type="number" class="form-control text-success" value="${totalDebe.toFixed(2)}" disabled ></td>
+                <td><input type="number" class="form-control text-success" value="${totalHaber.toFixed(2)}" disabled ></td>
+                `;
+            } else {
+                html += `
+                <td></td>
+                <th>Totales</th>
+                <td><input type="number" class="form-control text-danger" value="${totalDebe.toFixed(2)}" disabled ></td>
+                <td><input type="number" class="form-control text-danger" value="${totalHaber.toFixed(2)}" disabled ></td>
+                `;
+            }
+
             filas.innerHTML = html;
         }
     );
@@ -158,8 +170,6 @@ function nuevaPartida(cuentas) {
         <tr style="border: 1px gray solid">
             <td></td>
             <td class="col-3" id="location-cuenta-${countIDCuenta}"></td>
-            <td class="col-1"><input id="folio-${countIDCuenta}" class="form-control mt-1" type="text"></td>
-            <td class="col-1"><input id="parcial-${countIDCuenta}" min="0" step="0.01" class="form-control mt-1" type="number" value="${cuenta.parcial.toFixed(2)}"></td>
             <td class="col-1"><input id="debe-${countIDCuenta}" min="0" step="0.01" class="form-control mt-1" type="number" value="${cuenta.debe.toFixed(2)}"></td>
             <td class="col-1"><input id="haber-${countIDCuenta}" min="0" step="0.01" class="form-control mt-1" type="number" value="${cuenta.haber.toFixed(2)}"></td>
         </tr>
@@ -169,18 +179,6 @@ function nuevaPartida(cuentas) {
         totalHaber+=cuenta.haber;
     });
     return data;
-}
-
-// muestra el total final del libro diario
-function totalesLibroDiario() {
-    let html = `
-    <tr>
-        <td colspan="4"></td>
-        <td><input type="text" class="form-control" disabled step="0.01" value="${totalDebe.toFixed(2)}"></td>
-        <td><input type="text" class="form-control" disabled step="0.01" value="${totalHaber.toFixed(2)}"></td>
-    </tr>
-    `;
-    return html;
 }
 
 // refresca la pantalla para actualizar el contenido de esta

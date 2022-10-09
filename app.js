@@ -35,8 +35,7 @@ app.get('/add-partida', (req, res) => {
     json.libro.push(
         {
             "fecha": "",
-            "folio": "",
-            "cuentas": [{ "idCuenta": 1, "parcial": 0, "debe": 0, "haber": 0 }],
+            "cuentas": [{ "idCuenta": 1, "debe": 0, "haber": 0 }],
             "concepto": ""
         }
     );
@@ -49,7 +48,7 @@ app.get('/add-cuenta', (req, res) => {
     let file = fs.readFileSync('./partidas.json', 'utf8'); //abrir el archivo
     const json = JSON.parse(file); //Convertir en arreglo
     json.libro[json.libro.length - 1].cuentas.push(
-        { "idCuenta": 1, "parcial": 0, "debe": 0, "haber": 0 }
+        { "idCuenta": 1, "debe": 0, "haber": 0 }
     );
     file = fs.writeFileSync('./partidas.json', JSON.stringify(json));
     res.send("Cuenta Agregada Correctamente");
@@ -75,8 +74,6 @@ app.post('/save-partida', (req, res) => {
     let id = req.body.id;
     let fecha = req.body.fecha;
     let idCuenta = parseInt(req.body.idCuenta);
-    let folio = req.body.folio;
-    let parcial = parseFloat(req.body.parcial);
     let debe = parseFloat(req.body.debe);;
     let haber = parseFloat(req.body.haber);
     let concepto = req.body.concepto;
@@ -87,10 +84,10 @@ app.post('/save-partida', (req, res) => {
     anterior = json.libro[id].cuentas;
 
     if (anterior.length >= 1) {
-        anterior[anterior.length - 1] = { "idCuenta": idCuenta, "parcial": parcial, "debe": debe, "haber": haber }
+        anterior[anterior.length - 1] = { "idCuenta": idCuenta, "debe": debe, "haber": haber }
     }
 
-    json.libro[id] = { "fecha": fecha, "folio": folio, "cuentas": anterior, "concepto": concepto };
+    json.libro[id] = { "fecha": fecha, "cuentas": anterior, "concepto": concepto };
 
     file = fs.writeFileSync('./partidas.json', JSON.stringify(json));
     res.send("Datos Guardados Correctamente");

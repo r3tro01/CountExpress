@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Contabilidad</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -31,17 +31,14 @@
     <div class="container">
         <h1 class="text-center mt-2">Balance de comprobación</h1>
         <div class="table-responsive" id="balanceComprobacion" class="m-2">
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover" style="border: 1px black solid">
                 <thead>
-                    <tr>
-                        <th rowspan="2">N&deg;</th>
-                        <th class="col-4 text-center" rowspan="2">Detalle</th>
-                        <th class="text-center" colspan="2">Movimientos</th>
+                    <tr style="border: 2px black solid">
+                        <th rowspan="2" class="text-center">Codigo&deg;</th>
+                        <th class="col-4 text-center" rowspan="2">Cuenta</th>
                         <th class="text-center" colspan="2">Saldos</th>
                     </tr>
-                    <tr>
-                        <th>Deudor</th>
-                        <th>Acreedor</th>
+                    <tr style="border: 2px black solid">
                         <th>Deudor</th>
                         <th>Acreedor</th>
                     </tr>

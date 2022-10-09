@@ -9,10 +9,15 @@ function getLibroMayor() {
                 if (cuenta.tipo == "mayor") {
                     html += `
                     <div class="col-4">
-                        <table class="table table-bordered table-hover">
+                        <table class="table table-bordered table-hover" style="border: 1px black solid">
                             <thead>
+                                <tr style="border: 2px black solid">
+                                    <th class="text-center" colspan="3">${cuenta.id + " - " + cuenta.nombre}</th>
+                                </tr>
                                 <tr>
-                                    <th class="text-center" colspan="2">${cuenta.nombre}</th>
+                                    <th class="text-center">Partida</th>
+                                    <th>Debe</th>
+                                    <th>Haber</th>
                                 </tr>
                             </thead>
                             <tbody id="filasLibroMayor-${cuenta.id}">
@@ -35,15 +40,20 @@ function getPartidas(cuentaId) {
     ).then(
         data => {
             const filas = document.querySelector(`#filasLibroMayor-${cuentaId}`);
+            let n_partida = 0;
             let html = "";
             let totalDebe = 0;
             let totalHaber = 0;
             data.libro.forEach(partida => {
+                n_partida++;
+                
                 partida.cuentas.forEach(cuenta => {
+
                     if (cuenta.idCuenta == cuentaId) {
                         if (cuenta.debe != 0) {
                             html += `
                             <tr>
+                                <td class="text-center">${n_partida}</td>
                                 <td><input type="text" class="form-control" value="${cuenta.debe.toFixed(2)}" disabled="disabled"></td>
                                 <td><input type="text" class="form-control" value="0" disabled="disabled"></td>
                             </tr>`;
@@ -51,6 +61,7 @@ function getPartidas(cuentaId) {
                         } else if (cuenta.haber != 0) {
                             html += `
                             <tr>
+                                <td class="text-center">${n_partida}</td>
                                 <td><input type="text" class="form-control" value="0" disabled="disabled"></td>
                                 <td><input type="text" class="form-control" value="${cuenta.haber.toFixed(2)}" disabled="disabled"></td>
                             </tr>`;
@@ -60,20 +71,23 @@ function getPartidas(cuentaId) {
                 });
             });
             html += `
-                <tr>
-                    <td><input type="text" class="form-control text-success" value="${totalDebe.toFixed(2)}" disabled="disabled"></td>
-                    <td><input type="text" class="form-control text-success" value="${totalHaber.toFixed(2)}" disabled="disabled"></td>
+                <tr style="font-weight:bold;">
+                    <td>Totales</td>
+                    <td><input type="text" class="form-control text-dark" value="${totalDebe.toFixed(2)}" disabled="disabled"></td>
+                    <td><input type="text" class="form-control text-dark" value="${totalHaber.toFixed(2)}" disabled="disabled"></td>
                 </tr>`;
             let moviento = totalDebe - totalHaber;
             if (moviento > 0) {
                 html += `
-                <tr>
-                    <td><input type="text" class="form-control text-primary" value="${Math.abs(moviento.toFixed(2))}" disabled="disabled"></td>
+                <tr style="font-weight:bold;">
+                    <td>Resultado</td>
+                    <td><input type="text" class="form-control text-warning" value="${Math.abs(moviento.toFixed(2))}" disabled="disabled"></td>
                     <td></td>
                 </tr>`;
             }else {
                 html += `
-                <tr>
+                <tr style="font-weight:bold;">
+                    <td>Resultado</td>
                     <td></td>
                     <td><input type="text" class="form-control text-primary" value="${Math.abs(moviento.toFixed(2))}" disabled="disabled"></td>
                 </tr>`;
