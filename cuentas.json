@@ -16,6 +16,11 @@
             "nombre":"Cliente Sarita"
         },
         {
+            "id":110502,
+            "tipo":"mayor",
+            "nombre":"Cliente DeltaPlastic"
+        },
+        {
             "id":1208,
             "tipo":"mayor",
             "nombre":"Mobiliario y equipo de oficina"
