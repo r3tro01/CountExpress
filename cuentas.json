@@ -6,6 +6,11 @@
             "nombre":"Bancos"
         },
         {
+            "id":1104,
+            "tipo":"mayor",
+            "nombre":"Inversiones"
+        },
+        {
             "id":1105,
             "tipo":"mayor",
             "nombre":"Clientes"
@@ -19,6 +24,11 @@
             "id":110502,
             "tipo":"mayor",
             "nombre":"Cliente DeltaPlastic"
+        },
+        {
+            "id":1112,
+            "tipo":"mayor",
+            "nombre":"Anticipo a proveedores"
         },
         {
             "id":1208,
@@ -90,6 +100,11 @@
             "id":4101,
             "tipo":"mayor",
             "nombre":"Ventas nacionales"
+        },
+        {
+            "id":4102,
+            "tipo":"mayor",
+            "nombre":"Ventas internacionales"
         },
         {
             "id":5101,
