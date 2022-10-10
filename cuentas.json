@@ -107,6 +107,11 @@
             "nombre":"Ventas internacionales"
         },
         {
+            "id":4201,
+            "tipo":"mayor",
+            "nombre":"Intereses ganados sobre inversiones realizadas en moneda nacional"
+        },
+        {
             "id":5101,
             "tipo":"mayor",
             "nombre":"Compras nacionales"
