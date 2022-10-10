@@ -31,6 +31,11 @@
             "nombre":"Cliente Arcor"
         },
         {
+            "id":1106,
+            "tipo":"mayor",
+            "nombre":"Deudores diversos"
+        },
+        {
             "id":1112,
             "tipo":"mayor",
             "nombre":"Anticipo a proveedores"
@@ -115,6 +120,11 @@
             "id":4201,
             "tipo":"mayor",
             "nombre":"Intereses ganados sobre inversiones realizadas en moneda nacional"
+        },
+        {
+            "id":4302,
+            "tipo":"mayor",
+            "nombre":"Renta de activos no circulantes"
         },
         {
             "id":5101,
