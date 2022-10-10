@@ -150,6 +150,11 @@
             "id":5801,
             "tipo":"mayor",
             "nombre":"Gastos por sueldos ordinarios administrativos"
+        },
+        {
+            "id":5807,
+            "tipo":"mayor",
+            "nombre":"Gastos por impuestos de prestaciones de empleados"
         }
     ]
 }

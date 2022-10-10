@@ -59,6 +59,7 @@ function getSaldos(cuentaId) {
             });
             cacularTotales();
             
+
             if(totalSalDeudor == totalSalAcreedor) {
                 saldos.innerHTML = `
                 <td></td>

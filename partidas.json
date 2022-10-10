@@ -31,11 +31,11 @@
                 {
                     "idCuenta": 1103,
                     "debe": 0,
-                    "haber": 96000
+                    "haber": 24000
                 },
                 {
                     "idCuenta": 1301,
-                    "debe": 96000,
+                    "debe": 24000,
                     "haber": 0
                 },
                 {
@@ -206,7 +206,7 @@
                     "haber": 0
                 },
                 {
-                    "idCuenta": 4102,
+                    "idCuenta": 2107,
                     "debe": 0,
                     "haber": 25000
                 },
@@ -491,17 +491,7 @@
                 {
                     "idCuenta": 2107,
                     "debe": 0,
-                    "haber": 500
-                },
-                {
-                    "idCuenta": 4101,
-                    "debe": 0,
-                    "haber": 500
-                },
-                {
-                    "idCuenta": 1,
-                    "debe": 0,
-                    "haber": 0
+                    "haber": 1000
                 },
                 {
                     "idCuenta": 1103,
@@ -580,6 +570,16 @@
                     "haber": 0
                 },
                 {
+                    "idCuenta": 1103,
+                    "debe": 500,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 110503,
+                    "debe": 0,
+                    "haber": 500
+                },
+                {
                     "idCuenta": 1106,
                     "debe": 1500,
                     "haber": 0
@@ -640,16 +640,6 @@
                     "haber": 2500
                 },
                 {
-                    "idCuenta": 2107,
-                    "debe": 2500,
-                    "haber": 0
-                },
-                {
-                    "idCuenta": 4101,
-                    "debe": 0,
-                    "haber": 2500
-                },
-                {
                     "idCuenta": 1103,
                     "debe": 0,
                     "haber": 6450
@@ -696,7 +686,7 @@
                     "haber": 0
                 },
                 {
-                    "idCuenta": 4101,
+                    "idCuenta": 2107,
                     "debe": 0,
                     "haber": 15000
                 },
@@ -713,6 +703,210 @@
                 {
                     "idCuenta": 5801,
                     "debe": 450,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 1103,
+                    "debe": 0,
+                    "haber": 6450
+                },
+                {
+                    "idCuenta": 5701,
+                    "debe": 6000,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 5801,
+                    "debe": 450,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 1103,
+                    "debe": 0,
+                    "haber": 522.34
+                },
+                {
+                    "idCuenta": 5705,
+                    "debe": 522.34,
+                    "haber": 0
+                }
+            ],
+            "concepto": ""
+        },
+        {
+            "fecha": "2021-09-01",
+            "cuentas": [
+                {
+                    "idCuenta": 1103,
+                    "debe": 0,
+                    "haber": 6450
+                },
+                {
+                    "idCuenta": 5701,
+                    "debe": 6000,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 5801,
+                    "debe": 450,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 1103,
+                    "debe": 0,
+                    "haber": 6450
+                },
+                {
+                    "idCuenta": 5701,
+                    "debe": 6000,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 5801,
+                    "debe": 450,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 1103,
+                    "debe": 0,
+                    "haber": 522.34
+                },
+                {
+                    "idCuenta": 5705,
+                    "debe": 522.34,
+                    "haber": 0
+                }
+            ],
+            "concepto": ""
+        },
+        {
+            "fecha": "2021-10-01",
+            "cuentas": [
+                {
+                    "idCuenta": 1103,
+                    "debe": 0,
+                    "haber": 6450
+                },
+                {
+                    "idCuenta": 5701,
+                    "debe": 6000,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 5801,
+                    "debe": 450,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 1103,
+                    "debe": 0,
+                    "haber": 6450
+                },
+                {
+                    "idCuenta": 5701,
+                    "debe": 6000,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 5801,
+                    "debe": 450,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 1103,
+                    "debe": 0,
+                    "haber": 522.34
+                },
+                {
+                    "idCuenta": 5705,
+                    "debe": 522.34,
+                    "haber": 0
+                }
+            ],
+            "concepto": ""
+        },
+        {
+            "fecha": "2021-11-01",
+            "cuentas": [
+                {
+                    "idCuenta": 1103,
+                    "debe": 0,
+                    "haber": 6450
+                },
+                {
+                    "idCuenta": 5701,
+                    "debe": 6000,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 5801,
+                    "debe": 450,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 1103,
+                    "debe": 0,
+                    "haber": 6450
+                },
+                {
+                    "idCuenta": 5701,
+                    "debe": 6000,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 5801,
+                    "debe": 450,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 1103,
+                    "debe": 0,
+                    "haber": 522.34
+                },
+                {
+                    "idCuenta": 5705,
+                    "debe": 522.34,
+                    "haber": 0
+                }
+            ],
+            "concepto": ""
+        },
+        {
+            "fecha": "2021-12-01",
+            "cuentas": [
+                {
+                    "idCuenta": 1103,
+                    "debe": 50000,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 1105,
+                    "debe": 0,
+                    "haber": 50000
+                },
+                {
+                    "idCuenta": 1103,
+                    "debe": 0,
+                    "haber": 6450
+                },
+                {
+                    "idCuenta": 5701,
+                    "debe": 6000,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 5801,
+                    "debe": 450,
+                    "haber": 0
+                },
+                {
+                    "idCuenta": 1103,
+                    "debe": 0,
+                    "haber": 23607
+                },
+                {
+                    "idCuenta": 5807,
+                    "debe": 23607,
                     "haber": 0
                 },
                 {
