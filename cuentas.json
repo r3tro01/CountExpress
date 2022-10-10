@@ -26,6 +26,11 @@
             "nombre":"Cliente DeltaPlastic"
         },
         {
+            "id":110503,
+            "tipo":"mayor",
+            "nombre":"Cliente Arcor"
+        },
+        {
             "id":1112,
             "tipo":"mayor",
             "nombre":"Anticipo a proveedores"
